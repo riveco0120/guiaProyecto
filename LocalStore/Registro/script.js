@@ -12,7 +12,6 @@ function crearUsuario() {
         sexo,
         contrasena
     };
-
     localStorage.setItem(correo, JSON.stringify(usuario));
 
     alert('Usuario creado correctamente. Por favor, inicie sesión.');
