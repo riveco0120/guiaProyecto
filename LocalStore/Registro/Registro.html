@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h2>Registro de Usuario</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" required>
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" required>
+        <label for="sexo">Sexo:</label>
+        <select id="sexo">
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+        </select>
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" required>
+        <button onclick="crearUsuario()">Crear Usuario</button>
+        <button onclick="irA('index.html')">Salir</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

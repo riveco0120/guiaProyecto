@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+#app {
+    width: 250px;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+}
+
+input,
+select,
+button {
+    margin-bottom: 10px;
+}
+
+#mensajeError {
+    color: red;
+    margin-top: 10px;
+}
+
+#usuarioLogueado {
+    margin-top: 20px;
+}

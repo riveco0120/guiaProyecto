@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Medio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul>
+        <li id="miElemento">Elemento 1</li>
+    </ul>
+    <script>
+        // Agregar una clase al hacer clic en un elemento de la lista
+        var listElemnto = document.getElementById('miElemento')
+        .addEventListener('click', pintar)
+            
+    
+
+        function pintar(){
+
+          listElemnto.classList.toggle('highlight')   
+        }
+        
+    </script>
+</body>
+</html>
