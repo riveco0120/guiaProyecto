@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.image-selector {
+    position: relative;
+    text-align: center;
+}
+
+#fileInput {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+    margin-top: 10px;
+    display: none;
+}

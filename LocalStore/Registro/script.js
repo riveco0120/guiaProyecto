@@ -1,10 +1,12 @@
 function crearUsuario() {
+    //Se obtiene la informacion del formulario
     const nombre = document.getElementById('nombre').value;
     const apellido = document.getElementById('apellido').value;
     const correo = document.getElementById('correo').value;
     const sexo = document.getElementById('sexo').value;
     const contrasena = document.getElementById('contrasena').value;
 
+    //Se crea un objeto de tipo usuario
     const usuario = {
         nombre,
         apellido,
@@ -12,19 +14,33 @@ function crearUsuario() {
         sexo,
         contrasena
     };
-    localStorage.setItem(correo, JSON.stringify(usuario));
 
+    //Se guarda el objeto con la llave "Correo" 
+    /**
+     *JSON.stringify - > Convertir el objeto usuario a tipo String 
+     */
+    localStorage.setItem(correo, JSON.stringify(usuario));
+    
     alert('Usuario creado correctamente. Por favor, inicie sesión.');
-}
+   }
 
 function iniciarSesion() {
     const correoLogin = document.getElementById('correoLogin').value;
     const contrasenaLogin = document.getElementById('contrasenaLogin').value;
 
+    //Obtenemos el usuario 
+    /**
+     * El usuario a qui es un string 
+     */
     const usuarioGuardado = localStorage.getItem(correoLogin);
+    alert(usuarioGuardado)
 
     if (usuarioGuardado) {
+
+        //Se convierte el usuario a tipo objeto 
         const usuario = JSON.parse(usuarioGuardado);
+        alert(usuario.nombre)
+        alert(usuario.contrasena)
 
         if (usuario.contrasena === contrasenaLogin) {
             document.getElementById('mensajeError').innerText = '';
